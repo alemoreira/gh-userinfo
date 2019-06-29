@@ -24,12 +24,11 @@ class SearchUser extends React.Component{
   render() {
     return (
       <div className="jumbotron">
-        <h1>
-          GitHub Info 
-          <a href="https://jscasts.teachable.com/"><small> JSCast | Matheus Lima</small></a>
-        </h1>
+        <h1 className="display-4">GitHub Info</h1>
+        <p className="lead"><a href="https://jscasts.teachable.com/"><small> JSCast | Matheus Lima</small></a></p>
+        <hr className="my-4"/>
         <div className="row">
-          <form onSubmit={this.handleSubmit}>
+          <form className="col-sm-6" onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label>Nome de Usuário</label>
               <input
@@ -37,7 +36,8 @@ class SearchUser extends React.Component{
                 ref="username"
                 className="form-control"
                 placeholder="Ex: matheusml"
-                />
+              />
+              <small id="usernamelHelp" className="form-text text-muted">Digite o nome de usuário.</small>
             </div>
             <button
               type="submit"
